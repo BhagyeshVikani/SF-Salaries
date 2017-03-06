@@ -53,3 +53,7 @@ Convert 4-D numpy array into a grid image
 
 #### Return
 * (3-D numpy array) – A grid of input images
+
+## To visualization in TensorBoard
+Run command in console
+> tensorboard --logdir=\<path-to-logdir\>

@@ -33,9 +33,10 @@ cnnvis main api function
 #### Return
 * is_success (boolean) – True if not errors. False otherwise
 
-## To visualization in TensorBoard
+## To visualize in TensorBoard
 Run command in console
 > tensorboard --logdir=\<path-to-logdir\>
+and under tensorboard homepage look under the *Images* tab
 
 ## Helper functions
 ### image_normalization(image, ubound=255.0, epsilon=1e-07)

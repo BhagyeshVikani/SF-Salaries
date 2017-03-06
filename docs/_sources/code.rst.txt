@@ -1,9 +1,0 @@
-code package
-============
-
-code.new_api module
--------------------
-
-.. automodule:: code.cnnvis
-    :members:
-

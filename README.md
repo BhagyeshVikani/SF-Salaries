@@ -1,60 +1,39 @@
-# tf_cnnvis
+# SF-Salaries
 
-tf_cnnvis is an implementation of the paper [Visualizing and Understanding Convolutional Networks](https://www.cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf) by Matthew D. Zeiler and Rob Fergus. In implementation we uses [TensorFlow](https://www.tensorflow.org/) library to generate reconstruction images from Convolutional Networks.
+One way to understand how a city government works is by looking at who it employs and how its employees are compensated. This data contains the names, job title, and compensation for San Francisco city employees on an annual basis from 2011 to 2014.
 
-## Requirements:
-* Tensorflow (>= 1.0)
-* Numpy
-* Scipy
-* h5py
+## Exploration Ideas
 
-## Add to PYTHONPATH
-Add below line at the end of the ~/.bashrc file for global access
-> export PYTHONPATH=$PYTHONPATH:\<path-to-the-repo\>
+To help get you started, here are some data exploration ideas:
 
-## Documentation
-### get_visualization(graph_or_path, value_feed_dict, input_tensor=None, layers='r', path_logdir='./Log', path_outdir='./Output', force=False, n=8) 
-cnnvis main api function
-#### Parameters
-* graph_or_path (tf.Graph object or String) – TF graph or [Path-to-saved-graph] as String
-* value_feed_dict (dict or list) – Values of placeholders to feed while evaluting
-    * dict : {placeholder1 : value1, ...}
-    * list : [value1, value2, ...]
-* input_tensor (tf.tensor object (Default = None)) – tf.tensor object which is an tensor which brings input images to the TF graph
-* layers (list or String (Default = 'r')) – 
-    * ‘r’ : Reconstruction from all the relu layers 
-    * ‘p’ : Reconstruction from all the pooling layers 
-    * ‘c’ : Reconstruction from all the convolutional layers
-* path_outdir (String (Default = "./Output")) – [path-to-dir] to save results into disk as images
-* path_logdir (String (Default = "./Log")) – [path-to-log-dir] to make log file for TensorBoard visualization
-* force (boolean (Default = False)) – True to took of limit for number of featuremaps in a layer
-* n (int (Default = 8)) – Number of gradient ops will be added to the graph to avoid redundent forward pass
+How have salaries changed over time between different groups of people?
+How are base pay, overtime pay, and benefits allocated between different groups?
+Is there any evidence of pay discrimination based on gender in this dataset?
+How is budget allocated based on different groups and responsibilities?
+Have other ideas you're curious for someone else to explore? Post them in this forum thread.
 
-#### Return
-* is_success (boolean) – True if not errors. False otherwise
+## Data Description
 
-## To visualize in TensorBoard
-Run command in console
-> tensorboard --logdir=\<path-to-logdir\>
-and under tensorboard homepage look under the *Images* tab
+sf-salaries-release-*.zip (downloadable via the "Download Data" link in the header above) contains a CSV table and a SQLite database (with the same data as the CSV file). Here's the code that creates this data release.
 
-## Helper functions
-### image_normalization(image, ubound=255.0, epsilon=1e-07)
-Min-Max image normalization. Convert pixle values in range [0, ubound]
-#### Parameters
-* image (3-D numpy array) – A numpy array to normalize
-* ubound (float (Default = 255.0)) – upperbound for a image pixel value
-* epsilon (float (Default = 1e-7)) – for computational stability
+The original source for this data is here. We've taken the raw files here and combined/normalized them into a single CSV file as well as a SQLite database with an equivalently-defined table.
 
-#### Return
-* (3-D numpy array) – A normalized image
+## Salaries.csv
 
-### convert_into_grid(Xs, ubound=255.0, padding=1)
-Convert 4-D numpy array into a grid image
-#### Parameters
-* Xs (4-D numpy array (first axis contations an image)) – A numpy array of images to make grid out of it
-* ubound (float (Default = 255.0)) – upperbound for a image pixel value
-* padding (int (Default = 1)) – padding size between grid cells
+* Id
+* EmployeeName
+* JobTitle
+* BasePay
+* OvertimePay
+* OtherPay
+* Benefits
+* TotalPay
+* TotalPayBenefits
+* Year
+* Notes
+* Agency
+* Status
 
-#### Return
-* (3-D numpy array) – A grid of input images
+---
+
+Link to DataSet : https://www.kaggle.com/kaggle/sf-salaries/downloads/sf-salaries-release-2015-12-21-03-21-32.zip

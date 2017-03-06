@@ -34,6 +34,11 @@ cnnvis main api function
 #### Return
 * is_success (boolean) – True if not errors. False otherwise
 
+## To visualization in TensorBoard
+Run command in console
+> tensorboard --logdir=\<path-to-logdir\>
+
+## Helper functions
 ### image_normalization(image, ubound=255.0, epsilon=1e-07)
 Min-Max image normalization. Convert pixle values in range [0, ubound]
 #### Parameters
@@ -53,7 +58,3 @@ Convert 4-D numpy array into a grid image
 
 #### Return
 * (3-D numpy array) – A grid of input images
-
-## To visualization in TensorBoard
-Run command in console
-> tensorboard --logdir=\<path-to-logdir\>

@@ -3,10 +3,9 @@
 tf_cnnvis is an implementation of the paper [Visualizing and Understanding Convolutional Networks](https://www.cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf) by Matthew D. Zeiler and Rob Fergus. In implementation we uses [TensorFlow](https://www.tensorflow.org/) library to generate reconstruction images from Convolutional Networks.
 
 # Documentation
-## get_visualization(graph_or_path, value_feed_dict, input_tensor=None, layers='r', path_logdir='./Log', path_outdir='./Output', force=False, n=8) 
-### Description
+### get_visualization(graph_or_path, value_feed_dict, input_tensor=None, layers='r', path_logdir='./Log', path_outdir='./Output', force=False, n=8) 
 cnnvis main api function
-### Parameters
+#### Parameters
 * graph_or_path (tf.Graph object or String) – TF graph or [Path-to-saved-graph] as String
 * value_feed_dict (dict or list) – Values of placeholders to feed while evaluting
     * dict : {placeholder1 : value1, ...}
@@ -21,7 +20,7 @@ cnnvis main api function
 * force (boolean (Default = False)) – True to took of limit for number of featuremaps in a layer
 * n (int (Default = 8)) – Number of gradient ops will be added to the graph to avoid redundent forward pass
 
-### Return
+#### Return
 * is_success (boolean) – True if not errors. False otherwise
 
 ## image_normalization(image, ubound=255.0, epsilon=1e-07)

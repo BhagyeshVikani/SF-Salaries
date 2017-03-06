@@ -23,24 +23,22 @@ cnnvis main api function
 #### Return
 * is_success (boolean) – True if not errors. False otherwise
 
-## image_normalization(image, ubound=255.0, epsilon=1e-07)
-### Description
+### image_normalization(image, ubound=255.0, epsilon=1e-07)
 Min-Max image normalization. Convert pixle values in range [0, ubound]
-### Parameters
+#### Parameters
 * image (3-D numpy array) – A numpy array to normalize
 * ubound (float (Default = 255.0)) – upperbound for a image pixel value
 * epsilon (float (Default = 1e-7)) – for computational stability
 
-### Return
+#### Return
 * (3-D numpy array) – A normalized image
 
-## convert_into_grid(Xs, ubound=255.0, padding=1)
-### Description
+### convert_into_grid(Xs, ubound=255.0, padding=1)
 Convert 4-D numpy array into a grid image
-### Parameters
+#### Parameters
 * Xs (4-D numpy array (first axis contations an image)) – A numpy array of images to make grid out of it
 * ubound (float (Default = 255.0)) – upperbound for a image pixel value
 * padding (int (Default = 1)) – padding size between grid cells
 
-### Return
+#### Return
 * (3-D numpy array) – A grid of input images

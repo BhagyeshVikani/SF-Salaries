@@ -7,7 +7,6 @@ tf_cnnvis is an implementation of the paper [Visualizing and Understanding Convo
 * Numpy
 * Scipy
 * h5py
-* wget
 
 ## Add to PYTHONPATH
 Add below line at the end of the ~/.bashrc file for global access
@@ -21,7 +20,7 @@ cnnvis main api function
 * value_feed_dict (dict or list) – Values of placeholders to feed while evaluting
     * dict : {placeholder1 : value1, ...}
     * list : [value1, value2, ...]
-* input_tensor (tf.tensor object (Default = None)) – tf.tensor object which is an input to TF graph
+* input_tensor (tf.tensor object (Default = None)) – tf.tensor object which is an tensor which brings input images to the TF graph
 * layers (list or String (Default = 'r')) – 
     * ‘r’ : Reconstruction from all the relu layers 
     * ‘p’ : Reconstruction from all the pooling layers 

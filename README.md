@@ -2,7 +2,13 @@
 
 tf_cnnvis is an implementation of the paper [Visualizing and Understanding Convolutional Networks](https://www.cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf) by Matthew D. Zeiler and Rob Fergus. In implementation we uses [TensorFlow](https://www.tensorflow.org/) library to generate reconstruction images from Convolutional Networks.
 
-# Documentation
+## Requirements:
+* Tensorflow (>= 1.0)
+* Numpy
+* Scipy
+* h5py
+
+## Documentation
 ### get_visualization(graph_or_path, value_feed_dict, input_tensor=None, layers='r', path_logdir='./Log', path_outdir='./Output', force=False, n=8) 
 cnnvis main api function
 #### Parameters

@@ -11,7 +11,7 @@ tf_cnnvis is an implementation of the paper [Visualizing and Understanding Convo
 
 ## Add to PYTHONPATH
 Add below line at the end of the ~/.bashrc file for global access
-> export PYTHONPATH=$PYTHONPATH:<path-to-the-repo>
+> export PYTHONPATH=$PYTHONPATH:\<path-to-the-repo\>
 
 ## Documentation
 ### get_visualization(graph_or_path, value_feed_dict, input_tensor=None, layers='r', path_logdir='./Log', path_outdir='./Output', force=False, n=8) 

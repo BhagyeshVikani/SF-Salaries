@@ -7,6 +7,7 @@ tf_cnnvis is an implementation of the paper [Visualizing and Understanding Convo
 * Numpy
 * Scipy
 * h5py
+* wget
 
 ## Documentation
 ### get_visualization(graph_or_path, value_feed_dict, input_tensor=None, layers='r', path_logdir='./Log', path_outdir='./Output', force=False, n=8) 
